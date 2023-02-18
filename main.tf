@@ -34,3 +34,9 @@ module "dynamodb_module" {
   ENVIRONMENT = var.ENVIRONMENT
 
 }
+
+module "dynamodb_module_remote" {
+  source      = "git::https://github.com/cloud122/terraform_project_child_mod.git"
+  ENVIRONMENT = var.ENVIRONMENT
+
+}
