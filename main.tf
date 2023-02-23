@@ -29,12 +29,14 @@ module "lambda_module" {
 
 }
 
-module "dynamodb_module" {
-  source      = "./modules/dynamodb"
-  ENVIRONMENT = var.ENVIRONMENT
+# module "dynamodb_module" {
+#   source      = "./modules/dynamodb"
+#   ENVIRONMENT = var.ENVIRONMENT
 
-}
+# }
 
+#----to refresh remote module
+#----terraform get --update
 module "dynamodb_module_remote" {
   source      = "git::https://github.com/cloud122/terraform_project_child_mod.git"
   ENVIRONMENT = var.ENVIRONMENT
